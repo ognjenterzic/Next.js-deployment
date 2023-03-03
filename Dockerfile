@@ -1,10 +1,7 @@
 # First stage #
 FROM node:18-alpine as builder
 
-ENV NEXT_PUBLIC_FOURSQUARE_API_KEY=fsq3snxM24jfqamDg26HA89t8YESgTqhC7kkE40jrM0ZjuY=
-ENV NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=8p9lC4mKntiOa0q50srgCcspkNBLFoXELHcdfvTBM4k
-ENV AIRTABLE_API_KEY=keyieL30tupx8ItBM
-ENV AIRTABLE_BASE_KEY=appEQyo6tgjzfYWIz
+#This is place where I have put env variables
 
 WORKDIR /app
 
@@ -23,10 +20,7 @@ WORKDIR /app
 
 COPY --from=builder /app /app
 
-ENV NEXT_PUBLIC_FOURSQUARE_API_KEY=fsq3snxM24jfqamDg26HA89t8YESgTqhC7kkE40jrM0ZjuY=
-ENV NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=8p9lC4mKntiOa0q50srgCcspkNBLFoXELHcdfvTBM4k
-ENV AIRTABLE_API_KEY=keyieL30tupx8ItBM
-ENV AIRTABLE_BASE_KEY=appEQyo6tgjzfYWIz
+#This is place where I have put env variables
 
 EXPOSE 3000
 
